@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1 class="logo">Zerui(Lizzy) Li</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#professional-experiences">Professional Experiences</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Lizzy's Portfolio</h1>
+            <p>I'm a problem solver💪 with data📊 and strategy🔧 </p>
+        </div>
+    </section>
+
+    <section id="professional-experiences" class="experiences-section">
+        <h2>Professional Experiences</h2>
+        <div class="experiences-container">
+            <div class="experience-card">
+                <div class="experience-logo">
+                    <div class="logo-wrapper">
+                        <img src="images/ember-logo.png" alt="Ember Logo">
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company">Ember Learning</h3>
+                        <p class="company-tagline">AI-powered educational platform</p>
+                        <div class="position-info">
+                            <h4 class="position-title">Product Analysis Manager Intern</h4>
+                            <p class="duration">Sep 2024 - Present</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-details">
+                    <div class="experience-content">
+                        <h4>Key Achievements</h4>
+                        <div class="metrics-dashboard">
+                            <div class="metric-card">
+                                <div class="metric-value">+20%</div>
+                                <div class="metric-label">User Retention</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value">+45%</div>
+                                <div class="metric-label">Feature Adoption</div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>User Behavior Analysis through SQL, A/B testing</li>
+                            <li>Product Insights & Visualization using Tableau, Power BI</li>
+                            <li>Market Segmentation with user surveys, K-means clustering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- TikTok Experience Card -->
+            <div class="experience-card">
+                <div class="experience-logo">
+                    <div class="logo-wrapper">
+                        <img src="images/tiktok-logo.png" alt="TikTok Logo">
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company">TikTok</h3>
+                        <p class="company-tagline">Where creativity meets technology</p>
+                        <div class="position-info">
+                            <h4 class="position-title">Project Operations Manager Intern</h4>
+                            <p class="duration">Jun 2022 - Sep 2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-details">
+                    <div class="experience-content">
+                        <h4>Key Achievements</h4>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-icon">📊</div>
+                                <div class="metric-title">Decision Error Reduction</div>
+                                <div class="metric-value">25%</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">📈</div>
+                                <div class="metric-title">Sales Conversion Improvement</div>
+                                <div class="metric-value">12%</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 12%"></div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">🎯</div>
+                                <div class="metric-title">Manual Error Reduction</div>
+                                <div class="metric-value">30%</div>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 30%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills-radar">
+                            <h4>Technical Skills</h4>
+                            <canvas id="skillsRadar"></canvas>
+                        </div>
+                        <ul>
+                            <li>Developed automated SQL system and designed real-time Tableau dashboards for supply chain and sales teams, optimizing inventory forecasting and reducing decision-making errors by 25% for Walmart.</li>
+                            <li>Conducted KPI analysis, measuring efficiency metrics for order fulfillment rates and sales cycle duration. Built predictive models in Excel (with VBA) and Power BI to forecast revenue trends, resulting in a 12% improvement in sales conversion rates.</li>
+                            <li>Led CRM-based workflow automation in Salesforce and built interactive Google Sheets dashboards to track business development KPIs for Walmart, enhancing data validation processes to ensure compliance with financial transaction policies, reducing manual errors by 30%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+        <h2>Resume</h2>
+        <div class="resume-content">
+            <div class="experience">
+                <h3>Experience</h3>
+                <!-- Add your work experience here -->
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <!-- Add your education here -->
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <!-- Add your skills here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <!-- Project cards will be added here -->
+        </div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>Blog</h2>
+        <div class="blog-posts">
+            <!-- Blog posts will be added here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
