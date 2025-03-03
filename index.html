@@ -354,4 +354,48 @@
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
+
+/* 移动端通用优化 */
+@media (max-width: 768px) {
+  /* 调整导航栏 */
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  /* 调整技能词云 */
+  .floating-skills {
+    width: 100%;
+    height: 60%;
+  }
+  
+  .skill-word {
+    font-size: 1rem;  /* 减小字体大小 */
+    padding: 0.3rem 0.6rem;  /* 减小内边距 */
+  }
+
+  /* 调整经验卡片 */
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  /* 调整指标面板 */
+  .metrics-dashboard {
+    grid-template-columns: 1fr;  /* 单列显示 */
+  }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+  
+  .skill-word {
+    font-size: 0.9rem;
+  }
+  
+  .experience-card {
+    padding: 1rem;
+  }
+} 
