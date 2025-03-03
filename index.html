@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav>
@@ -27,7 +26,7 @@
         </div>
     </section>
 
-    <section id="professional-experiences" class="experiences-section">
+    <section class="experiences-section">
         <h2>Professional Experiences</h2>
         <div class="experiences-container">
             <div class="experience-card">
@@ -66,6 +65,59 @@
                 </div>
             </div>
             <!-- TikTok Experience Card -->
+            <div class="experience-card locked" id="tiktok-card">
+                <div class="card-front">
+                    <div class="lock-overlay">
+                        <button class="unlock-btn" onclick="unlockExperience()">
+                            <span class="lock-icon">🔒</span>
+                            <span>Unlock Experience</span>
+                        </button>
+                    </div>
+                    <div class="experience-logo">
+                        <div class="logo-wrapper">
+                            <img src="images/tiktok-logo.png" alt="TikTok Logo">
+                        </div>
+                        <div class="company-info">
+                            <h3 class="company">TikTok</h3>
+                            <p class="company-tagline">Where creativity meets technology</p>
+                            <div class="position-info">
+                                <h4 class="position-title">Business & User Research Analyst Intern</h4>
+                                <p class="duration">Dec 2022 - Mar 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-details">
+                        <div class="experience-content">
+                            <div class="achievements-section">
+                                <h4>Key Achievements</h4>
+                                <div class="achievements-grid">
+                                    <div class="achievement-card">
+                                        <div class="achievement-icon">🎯</div>
+                                        <div class="achievement-title">Market/User Research</div>
+                                        <div class="xp-badge">+500 XP</div>
+                                    </div>
+                                    <div class="achievement-card">
+                                        <div class="achievement-icon">📊</div>
+                                        <div class="achievement-title">Cross-functional Collaboration</div>
+                                        <div class="xp-badge">+300 XP</div>
+                                    </div>
+                                    <div class="achievement-card">
+                                        <div class="achievement-icon">🚀</div>
+                                        <div class="achievement-title">User Growth Hacker</div>
+                                        <div class="xp-badge">+400 XP</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Led user behavior analysis for 5 countries and 5 functional teams, increasing engagement by 25%</li>
+                                <li>Developed interactive dashboards using Tableau, offering strategic data-driven insights</li>
+                                <li>Conducted A/B testing for new features, improving CTR by 15%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- New TikTok PM Experience Card -->
             <div class="experience-card">
                 <div class="experience-logo">
                     <div class="logo-wrapper">
@@ -75,7 +127,7 @@
                         <h3 class="company">TikTok</h3>
                         <p class="company-tagline">Where creativity meets technology</p>
                         <div class="position-info">
-                            <h4 class="position-title">Project Operations Manager Intern</h4>
+                            <h4 class="position-title">Project Manager Intern</h4>
                             <p class="duration">Jun 2022 - Sep 2022</p>
                         </div>
                     </div>
@@ -83,40 +135,76 @@
                 <div class="experience-details">
                     <div class="experience-content">
                         <h4>Key Achievements</h4>
-                        <div class="metrics-grid">
+                        <div class="metrics-dashboard">
                             <div class="metric-card">
-                                <div class="metric-icon">📊</div>
-                                <div class="metric-title">Decision Error Reduction</div>
-                                <div class="metric-value">25%</div>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 25%"></div>
-                                </div>
+                                <div class="metric-value">+35%</div>
+                                <div class="metric-label">Project Efficiency</div>
                             </div>
                             <div class="metric-card">
-                                <div class="metric-icon">📈</div>
-                                <div class="metric-title">Sales Conversion Improvement</div>
-                                <div class="metric-value">12%</div>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 12%"></div>
-                                </div>
-                            </div>
-                            <div class="metric-card">
-                                <div class="metric-icon">🎯</div>
-                                <div class="metric-title">Manual Error Reduction</div>
-                                <div class="metric-value">30%</div>
-                                <div class="progress-bar">
-                                    <div class="progress" style="width: 30%"></div>
-                                </div>
+                                <div class="metric-value">12+</div>
+                                <div class="metric-label">Projects Delivered</div>
                             </div>
                         </div>
+                        
+                        <!-- Skills Radar -->
                         <div class="skills-radar">
-                            <h4>Technical Skills</h4>
-                            <canvas id="skillsRadar"></canvas>
+                            <div class="skill-stat" data-progress="90">
+                                <div class="skill-icon">📊</div>
+                                <div class="skill-name">IT Consulting</div>
+                                <div class="skill-level">90%</div>
+                            </div>
+                            <div class="skill-stat" data-progress="85">
+                                <div class="skill-icon">👥</div>
+                                <div class="skill-name">Team Leadership/Communication</div>
+                                <div class="skill-level">85%</div>
+                            </div>
+                            <div class="skill-stat" data-progress="80">
+                                <div class="skill-icon">🔄</div>
+                                <div class="skill-name">Agile Methods</div>
+                                <div class="skill-level">80%</div>
+                            </div>
+                            <div class="skill-stat" data-progress="75">
+                                <div class="skill-icon">🌐</div>
+                                <div class="skill-name">Process Improvement</div>
+                                <div class="skill-level">75%</div>
+                            </div>
                         </div>
+
+                        <!-- Industry Distribution -->
+                        <div class="industry-distribution">
+                            <h4>Database Systems Designed Across Industries</h4>
+                            <div class="industry-grid">
+                                <div class="industry-card">
+                                    <div class="industry-icon">🛍️</div>
+                                    <div class="industry-name">Retail</div>
+                                    <div class="project-count">3 Projects</div>
+                                    <div class="progress-bar" style="--progress: 30%"></div>
+                                </div>
+                                <div class="industry-card">
+                                    <div class="industry-icon">💻</div>
+                                    <div class="industry-name">Technology</div>
+                                    <div class="project-count">4 Projects</div>
+                                    <div class="progress-bar" style="--progress: 40%"></div>
+                                </div>
+                                <div class="industry-card">
+                                    <div class="industry-icon">🎮</div>
+                                    <div class="industry-name">Gaming</div>
+                                    <div class="project-count">2 Projects</div>
+                                    <div class="progress-bar" style="--progress: 20%"></div>
+                                </div>
+                                <div class="industry-card">
+                                    <div class="industry-icon">🏢</div>
+                                    <div class="industry-name">Real Estate</div>
+                                    <div class="project-count">2 Project</div>
+                                    <div class="progress-bar" style="--progress: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+
                         <ul>
-                            <li>Developed automated SQL system and designed real-time Tableau dashboards for supply chain and sales teams, optimizing inventory forecasting and reducing decision-making errors by 25% for Walmart.</li>
-                            <li>Conducted KPI analysis, measuring efficiency metrics for order fulfillment rates and sales cycle duration. Built predictive models in Excel (with VBA) and Power BI to forecast revenue trends, resulting in a 12% improvement in sales conversion rates.</li>
-                            <li>Led CRM-based workflow automation in Salesforce and built interactive Google Sheets dashboards to track business development KPIs for Walmart, enhancing data validation processes to ensure compliance with financial transaction policies, reducing manual errors by 30%.</li>
+                            <li>Led cross-functional teams to deliver 12+ successful digital transformation projects with 35% improved efficiency</li>
+                            <li>Designed SQL systems and implemented Agile methodologies and established project tracking systems</li>
+                            <li>Coordinated with external/internal stakeholders</li>
                         </ul>
                     </div>
                 </div>
@@ -124,21 +212,93 @@
         </div>
     </section>
 
-    <section id="resume" class="resume-section">
-        <h2>Resume</h2>
-        <div class="resume-content">
-            <div class="experience">
-                <h3>Experience</h3>
-                <!-- Add your work experience here -->
+    <section class="education-section">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="experience-card">
+                <div class="experience-logo">
+                    <div class="logo-wrapper">
+                        <img src="images/duke-logo.png" alt="Duke University Logo">
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company">Duke University</h3>
+                        <p class="company-tagline">Pratt School of Engineering</p>
+                        <div class="position-info">
+                            <h4 class="position-title">Master of Engineering Management</h4>
+                            <p class="duration">Aug 2023 - May 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-details">
+                    <div class="experience-content">
+                        <h4>Main Courses</h4>
+                        <div class="metrics-dashboard">
+                            <div class="metric-card">
+                                <div class="metric-icon">📊</div>
+                                <div class="metric-label">Data Science</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">📈</div>
+                                <div class="metric-label">Data Visualization</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">🎯</div>
+                                <div class="metric-label">Product/Project Management</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">💡</div>
+                                <div class="metric-label">Marketing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="education">
-                <h3>Education</h3>
-                <!-- Add your education here -->
+
+            <div class="experience-card">
+                <div class="experience-logo">
+                    <div class="logo-wrapper">
+                        <img src="images/xiamen-logo.png" alt="Xiamen University Logo">
+                    </div>
+                    <div class="company-info">
+                        <h3 class="company">Xiamen University</h3>
+                        <p class="company-tagline">Top 20 University in China</p>
+                        <div class="position-info">
+                            <h4 class="position-title">Bachelor of Management Science and E-commerce</h4>
+                            <p class="duration">Sep 2019 - Jun 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-details">
+                    <div class="experience-content">
+                        <h4>Main Courses</h4>
+                        <div class="metrics-dashboard">
+                            <div class="metric-card">
+                                <div class="metric-icon">💻</div>
+                                <div class="metric-label">Data Analysis (SQL, Python, C++, Java)</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">👥</div>
+                                <div class="metric-label">CRM</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">⚙️</div>
+                                <div class="metric-label">Operation Management</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">📊</div>
+                                <div class="metric-label">Financial Analysis & Forecasting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skills">
-                <h3>Skills</h3>
-                <!-- Add your skills here -->
-            </div>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Add your skills here -->
         </div>
     </section>
 
