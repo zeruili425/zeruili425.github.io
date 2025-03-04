@@ -1478,4 +1478,191 @@ footer {
     .project-header h3 {
         font-size: 1.2rem;
     }
+}
+
+/* Model Section Styles */
+.model-section {
+    margin-top: 3rem;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 2rem;
+}
+
+.model-title {
+    color: #1a202c;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.model-block {
+    margin-bottom: 3rem;
+}
+
+.model-block h4 {
+    color: #2d3748;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.feature-list {
+    padding-left: 1.5rem;
+}
+
+.feature-list li {
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+}
+
+.feature-list ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+/* Models Grid */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.model-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-4px);
+}
+
+.model-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.model-icon {
+    font-size: 1.5rem;
+}
+
+.model-card h5 {
+    color: #2d3748;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.model-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.model-card li {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.model-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #556BDF;
+}
+
+/* Analysis Grid */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.analysis-card {
+    background: linear-gradient(135deg, #556BDF0F, #4A5ECD0F);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.indicators {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.indicator {
+    background: #556BDF;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
+}
+
+/* Segment Grid */
+.segment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.segment-card {
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+}
+
+.segment-card h5 {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+}
+
+.segment-card p {
+    margin: 0 0 1rem;
+    opacity: 0.9;
+}
+
+.strategy {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.segment-card.core {
+    background: linear-gradient(135deg, #556BDF, #4A5ECD);
+}
+
+.segment-card.high {
+    background: linear-gradient(135deg, #FF6B6B, #EE5253);
+}
+
+.segment-card.potential {
+    background: linear-gradient(135deg, #20BF6B, #26DE81);
+}
+
+.segment-card.low {
+    background: linear-gradient(135deg, #4b6584, #778ca3);
+}
+
+@media (max-width: 768px) {
+    .model-title {
+        font-size: 1.4rem;
+    }
+
+    .model-block h4 {
+        font-size: 1.2rem;
+    }
+
+    .models-grid,
+    .analysis-grid,
+    .segment-grid {
+        grid-template-columns: 1fr;
+    }
 } 
