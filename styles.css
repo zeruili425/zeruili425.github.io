@@ -8,6 +8,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    padding-top: 50px;  /* 为固定导航栏预留空间 */
 }
 
 /* Navigation */
@@ -86,7 +87,7 @@ nav {
     padding: 2rem;
     position: relative;
     overflow: hidden;
-    margin-top: 60px;
+    padding-top: 80px;  /* 调整顶部内边距，为固定导航栏留出空间 */
     background: #ffffff;
 }
 
@@ -247,14 +248,26 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        margin-top: 0;
+    nav {
+        height: 50px;
+        padding: 0;
+        position: fixed;  /* 确保导航栏固定在顶部 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: #fff;
     }
-    
+
+    .hero {
+        padding-top: 60px;  /* 移动端适配，确保内容不被导航栏遮挡 */
+    }
+
     .hero-content {
         padding: 1.5rem 2rem;
         max-width: 400px;
-        top: 10%;
+        top: 15%;  /* 调整欢迎文本的位置，确保不被导航栏遮挡 */
+        z-index: 2;  /* 确保文本显示在最上层 */
     }
     
     .hero-content h1 {
@@ -263,6 +276,10 @@ nav {
     
     .hero-content p {
         font-size: 0.95rem;
+    }
+
+    body {
+        padding-top: 50px;  /* 为固定导航栏预留空间 */
     }
 }
 
@@ -1288,5 +1305,11 @@ footer {
 @media (max-width: 768px) {
     .skill-word {
         font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero {
+        margin-top: 60px;  /* 桌面端保持原有间距 */
     }
 } 
