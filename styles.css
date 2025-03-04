@@ -248,38 +248,74 @@ nav {
 }
 
 @media (max-width: 768px) {
+    /* 导航栏优化 */
     nav {
         height: 50px;
         padding: 0;
-        position: fixed;  /* 确保导航栏固定在顶部 */
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background: #fff;
     }
 
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+
+    .nav-links {
+        display: none;  /* 先隐藏原导航链接 */
+    }
+
+    /* 添加汉堡菜单样式 */
+    .mobile-menu {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* 内容区域优化 */
     .hero {
-        padding-top: 60px;  /* 移动端适配，确保内容不被导航栏遮挡 */
+        padding-top: 60px;
+        height: 100vh;
+    }
+
+    .video-background {
+        width: 100%;
+        height: 40%;  /* 调整视频高度 */
+        top: 25%;     /* 调整视频位置 */
     }
 
     .hero-content {
-        padding: 1.5rem 2rem;
-        max-width: 400px;
-        top: 15%;  /* 调整欢迎文本的位置，确保不被导航栏遮挡 */
-        z-index: 2;  /* 确保文本显示在最上层 */
-    }
-    
-    .hero-content h1 {
-        font-size: 1.5rem;
-    }
-    
-    .hero-content p {
-        font-size: 0.95rem;
+        width: 100%;
+        max-width: none;
+        padding: 1rem;
+        top: 12%;    /* 调整欢迎文本位置 */
+        text-align: center;
     }
 
-    body {
-        padding-top: 50px;  /* 为固定导航栏预留空间 */
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    /* 浮动技能词优化 */
+    .floating-skills {
+        width: 100%;
+        height: 60%;
+        left: 0;
+        top: 40%;
+    }
+
+    .skill-word {
+        font-size: 1rem;  /* 减小技能词大小 */
     }
 }
 
@@ -1311,5 +1347,22 @@ footer {
 @media (min-width: 769px) {
     .hero {
         margin-top: 60px;  /* 桌面端保持原有间距 */
+    }
+}
+
+/* 添加汉堡菜单按钮 */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        cursor: pointer;
     }
 } 

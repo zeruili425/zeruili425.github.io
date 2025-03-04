@@ -138,4 +138,14 @@ style.textContent = `
         }
     }
 `;
-document.head.appendChild(style); 
+document.head.appendChild(style);
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+});
+
+// 点击菜单项后自动关闭菜单
+document.querySelector('.mobile-menu').addEventListener('click', function() {
+    this.style.display = 'none';
+}); 
