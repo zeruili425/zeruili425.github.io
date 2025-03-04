@@ -142,7 +142,7 @@ nav {
     animation: contentSlideUp 1s ease-out 0.5s forwards;
     box-shadow: none;
     left: 0;
-    top: 15%;
+    top: 10%;
     text-align: center;
 }
 
@@ -992,7 +992,6 @@ footer {
     }
 }
 
-/* 浮动技能词云样式 */
 .floating-skills {
     position: absolute;
     left: 35%;
