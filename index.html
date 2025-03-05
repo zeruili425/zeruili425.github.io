@@ -335,8 +335,9 @@
 
     <section id="projects" class="projects-section">
         <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
+        <div class="project-layout">
+            <!-- 左侧列 -->
+            <div class="project-left">
                 <div class="project-header">
                     <h3>User Behavior Analysis And Prediction</h3>
                     <a href="https://github.com/zeruili425/alibaba-customer-behavior-analysis" class="project-link">
@@ -347,84 +348,61 @@
                         <span class="tool-tag">Python</span>
                     </div>
                 </div>
+                
+                <!-- 左侧模型部分 -->
+                <div class="model-block">
+                    <h4>Classification Models for Predicting User Orders</h4>
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <div class="model-header">
+                                <span class="model-icon">🔄</span>
+                                <h5>Logistic Regression (LR)</h5>
+                            </div>
+                            <ul>
+                                <li>Initial modeling resulted in overfitting issues</li>
+                                <li>PCA applied for dimensionality reduction</li>
+                                <li>Recall: 0.79</li>
+                            </ul>
+                        </div>
+
+                        <div class="model-card">
+                            <div class="model-header">
+                                <span class="model-icon">🌲</span>
+                                <h5>LightGBM</h5>
+                            </div>
+                            <ul>
+                                <li>Grid search optimization performed</li>
+                                <li>Improved recall: 0.92</li>
+                                <li>Fast training speed for large-scale data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧列 -->
+            <div class="project-right">
                 <div class="model-section">
-                    <h3 class="model-title">Summary of Models and Methods Used at Different Stages</h3>
+                    <h3>Summary of Models and Methods</h3>
                     
-                    <!-- 数据预处理部分 -->
                     <div class="model-block">
                         <h4>Data Preprocessing & Feature Engineering</h4>
                         <ul class="feature-list">
-                            <li>Handling missing values by filling in missing data and removing anomalies</li>
-                            <li>Data type conversion, including date and age transformation</li>
-                            <li>Outlier treatment using box plot boundaries for replacement</li>
-                            <li>Feature engineering, including:
+                            <li>Handling missing values and removing anomalies</li>
+                            <li>Data type conversion and transformation</li>
+                            <li>Outlier treatment using box plot boundaries</li>
+                            <li>Feature engineering techniques:
                                 <ul>
                                     <li>Polar encoding for cyclic features</li>
                                     <li>Target encoding for categorical variables</li>
-                                    <li>Standardization and normalization for numerical anomalies</li>
-                                    <li>Statistical feature construction (age binning, order price)</li>
+                                    <li>Standardization and normalization</li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- 分类模型部分 -->
                     <div class="model-block">
-                        <h4>Classification Models for Predicting User Orders</h4>
-                        <div class="models-grid">
-                            <div class="model-card">
-                                <div class="model-header">
-                                    <span class="model-icon">🔄</span>
-                                    <h5>Logistic Regression (LR)</h5>
-                                </div>
-                                <ul>
-                                    <li>Initial modeling resulted in overfitting issues</li>
-                                    <li>PCA applied for dimensionality reduction</li>
-                                    <li>Recall: 0.79</li>
-                                </ul>
-                            </div>
-
-                            <div class="model-card">
-                                <div class="model-header">
-                                    <span class="model-icon">🌲</span>
-                                    <h5>LightGBM</h5>
-                                </div>
-                                <ul>
-                                    <li>Grid search optimization performed</li>
-                                    <li>Improved recall: 0.92</li>
-                                    <li>Fast training speed for large-scale data</li>
-                                </ul>
-                            </div>
-
-                            <div class="model-card">
-                                <div class="model-header">
-                                    <span class="model-icon">🌳</span>
-                                    <h5>Random Forest</h5>
-                                </div>
-                                <ul>
-                                    <li>Tuned tree parameters</li>
-                                    <li>Improved recall but decreased F1-score</li>
-                                    <li>Balance between complexity and performance</li>
-                                </ul>
-                            </div>
-
-                            <div class="model-card">
-                                <div class="model-header">
-                                    <span class="model-icon">🧠</span>
-                                    <h5>BP Neural Network</h5>
-                                </div>
-                                <ul>
-                                    <li>One hidden layer, 100 neurons, ReLU</li>
-                                    <li>SGD optimizer with "invscaling" rate</li>
-                                    <li>Suitable for nonlinear problems</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 用户行为分析部分 -->
-                    <div class="model-block">
-                        <h4>User Behavior Analysis & Value Assessment</h4>
+                        <h4>User Behavior Analysis</h4>
                         <div class="analysis-grid">
                             <div class="analysis-card">
                                 <h5>RFEM Model</h5>
@@ -434,46 +412,6 @@
                                     <span class="indicator">E: Engagement</span>
                                     <span class="indicator">M: Monetary</span>
                                 </div>
-                                <p>Feature importance calculated using LightGBM with entropy weighting</p>
-                            </div>
-
-                            <div class="analysis-card">
-                                <h5>K-Means Clustering</h5>
-                                <ul>
-                                    <li>Evaluated using CH Index, Silhouette Score</li>
-                                    <li>Four distinct user clusters identified</li>
-                                    <li>Effective in high-value user identification</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 用户分群部分 -->
-                    <div class="model-block">
-                        <h4>User Segmentation & Marketing Strategies</h4>
-                        <div class="segment-grid">
-                            <div class="segment-card core">
-                                <h5>Core Value Users (Group 3)</h5>
-                                <p>Highest purchase rate and engagement</p>
-                                <div class="strategy">Maintain strong customer relationships</div>
-                            </div>
-
-                            <div class="segment-card high">
-                                <h5>High-Value Users (Group 4)</h5>
-                                <p>Frequent logins, low purchase rates</p>
-                                <div class="strategy">Increase purchase intent through engagement</div>
-                            </div>
-
-                            <div class="segment-card potential">
-                                <h5>Potential Value Users (Group 1)</h5>
-                                <p>Recently active, inconsistent purchases</p>
-                                <div class="strategy">Identify needs and enhance conversion</div>
-                            </div>
-
-                            <div class="segment-card low">
-                                <h5>Low-Value Users (Group 2)</h5>
-                                <p>Low engagement and minimal purchases</p>
-                                <div class="strategy">Optimize acquisition channels</div>
                             </div>
                         </div>
                     </div>
